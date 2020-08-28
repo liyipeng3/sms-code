@@ -1,0 +1,25 @@
+{
+  "name": "sms-code",
+  "version": "0.0.1",
+  "description": "A package to generate random code and verify code.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/liyipeng123/sms-code.git"
+  },
+  "keywords": [
+    "sms",
+    "random",
+    "verify",
+    "code"
+  ],
+  "author": "李奕鹏",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/liyipeng123/sms-code/issues"
+  },
+  "homepage": "https://github.com/liyipeng123/sms-code#readme"
+}
