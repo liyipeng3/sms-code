@@ -1,5 +1,13 @@
 # sms-code
 
+## Installation
+Using npm:
+```shell
+$ npm i sms-code
+```
+Note: add `--save` if you are using npm < 5.0.0
+
+## Usage
 1.用于生成随机验证码以及验证验证码
 
 ```javascript
