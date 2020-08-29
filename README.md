@@ -1,5 +1,7 @@
 # sms-code
 
+[![NPM](https://nodei.co/npm/sms-code.png?downloads=true&downloadRank=true&stars=false)](https://nodei.co/npm/sms-code/)
+
 ## Installation
 Using npm:
 ```shell
