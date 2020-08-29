@@ -6,7 +6,12 @@ let maxAge = 5
 //  默认验证码长度
 let codeLength = 4
 
-function random (length) {
+/**
+ * 生成指定长度的随机数字
+ * @param length 指定长度
+ * @returns {string} 指定长度的数字字符串
+ */
+function random(length) {
     length || (length = 4)
 
     let chars = ''
@@ -21,7 +26,14 @@ function random (length) {
     return result
 }
 
-const Code = {
+const smsCode = {
+    /**
+     * 设置基础参数
+     * @param options = {
+     *      age: 最大生存时间 默认为5 单位分钟,
+     *      length: 生成代码长度 默认为4
+     *  }
+     */
     setOptions: (options) => {
         if (options.age && options.age > 0) {
             maxAge = options.age
@@ -30,7 +42,13 @@ const Code = {
             codeLength = options.length
         }
     },
+    /**
+     * 获取随机生成的代码
+     * @param phone 获取验证码的手机号码
+     * @returns {string} 生成的代码
+     */
     getCode: (phone) => {
+        phone = (phone).toString()
         let code = random(codeLength)
         store[phone] = code
 
@@ -39,7 +57,15 @@ const Code = {
         }, maxAge * 60 * 1000)
         return code
     },
+    /**
+     * 验证代码是否正确
+     * @param phone 需要验证的手机号码
+     * @param code 需要验证的手机号码对应的代码
+     * @returns {boolean} 验证结果
+     */
     verifyCode: (phone, code) => {
+        code = (code).toString()
+        phone = (phone).toString()
         if (store[phone] && store[phone] === code) {
             delete store[phone]
             return true
@@ -49,4 +75,4 @@ const Code = {
     }
 }
 
-export default Code
+module.exports = smsCode
