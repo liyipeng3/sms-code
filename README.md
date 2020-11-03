@@ -10,6 +10,16 @@ $ npm i sms-code
 Note: add `--save` if you are using npm < 5.0.0
 
 ## Usage
+0.快速开始
+```javascript
+    // nodejs 运行环境
+    const SmsCode = require('sms-code') 
+    const smsCode = new SmsCode(5, 4)
+    smsCode.getCode('188888888888')     // 随机数 如：3333
+    smsCode.verifyCode('18888888888', '3333')   // 验证结果 true/false
+```
+
+
 1.用于生成随机验证码以及验证验证码
 
 ```javascript
