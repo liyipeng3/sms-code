@@ -2,7 +2,6 @@ class SmsCode {
     private readonly store: {};
     private maxAge: number;
     private codeLength: number;
-    private static readonly numbers: string;
     private readonly numbers: string;
 
     /**
