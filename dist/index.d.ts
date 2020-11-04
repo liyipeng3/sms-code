@@ -41,4 +41,3 @@ declare class SmsCode {
      */
     private random;
 }
-export default SmsCode;

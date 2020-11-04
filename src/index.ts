@@ -89,5 +89,4 @@ class SmsCode {
     }
 }
 
-
-export default SmsCode;
+module.exports = SmsCode;

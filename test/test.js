@@ -1,6 +1,6 @@
 'use strict';
-const expect = require('chai').expect;
-const SmsCode = require('../dist/index').default;
+const expect = require('chai').expect
+const SmsCode = require('../dist/index')
 
 const smsCode = new SmsCode(5, 4)
 const phone = '18888888888'
