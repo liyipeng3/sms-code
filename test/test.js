@@ -25,6 +25,15 @@ describe('code test', () => {
     });
 });
 
+describe('once test', () => {
+    it('should be destroyed once', () => {
+        smsCode.setOptions({age: 5, length: 4})
+        const code = smsCode.getCode(phone);
+        expect(smsCode.verifyCode(phone, code)).to.equal(true);
+        expect(smsCode.verifyCode(phone, code)).to.equal(false);
+    });
+});
+
 describe('time test', async () => {
     it('should destroy in time', (done) => {
         smsCode.setOptions({age: 1 / 60 / 1000 * 1000, length: 4})
