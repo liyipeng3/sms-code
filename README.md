@@ -13,7 +13,10 @@ Note: add `--save` if you are using npm < 5.0.0
 0.快速开始
 ```javascript
     // nodejs 运行环境
-    const smsCode = require('sms-code').default
+    const smsCode = require('sms-code')
+    // es6
+    import smsCode from 'sms-code'
+
     const code = smsCode.getCode('188888888888')     // 随机数 如：3333
     smsCode.verifyCode('18888888888', code)   // 验证结果 true/false
 ```
