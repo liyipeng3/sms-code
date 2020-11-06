@@ -41,4 +41,5 @@ declare class SmsCode {
      */
     private random;
 }
-export default SmsCode;
+declare const _default: SmsCode;
+export default _default;

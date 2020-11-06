@@ -48,7 +48,7 @@
          */
         SmsCode.prototype.getCode = function (phone) {
             var _this = this;
-            phone = (phone).toString();
+            phone = String(phone);
             var code = this.random(this.codeLength);
             this.store[phone] = code;
             setTimeout(function () {
@@ -63,8 +63,8 @@
          * @returns {boolean} 验证结果
          */
         SmsCode.prototype.verifyCode = function (phone, code) {
-            code = (code).toString();
-            phone = (phone).toString();
+            code = String(code);
+            phone = String(phone);
             if (this.store[phone] && this.store[phone] === code) {
                 delete (this.store)[phone];
                 return true;
@@ -91,5 +91,5 @@
         };
         return SmsCode;
     }());
-    exports.default = SmsCode;
+    exports.default = new SmsCode(5, 4);
 });

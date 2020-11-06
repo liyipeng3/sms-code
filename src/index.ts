@@ -43,7 +43,7 @@ class SmsCode {
      * @returns {string} 生成的代码
      */
     getCode(phone: number | string) {
-        phone = (phone).toString()
+        phone = String(phone)
         let code = this.random(this.codeLength)
         this.store[phone] = code
 
@@ -60,8 +60,8 @@ class SmsCode {
      * @returns {boolean} 验证结果
      */
     verifyCode(phone: number | string, code: number | string) {
-        code = (code).toString()
-        phone = (phone).toString()
+        code = String(code)
+        phone = String(phone)
         if (this.store[phone] && this.store[phone] === code) {
             delete (this.store)[phone]
             return true
@@ -90,4 +90,4 @@ class SmsCode {
 }
 
 
-export default SmsCode;
+export default new SmsCode(5, 4);

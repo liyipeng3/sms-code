@@ -1,6 +1,6 @@
 {
   "name": "sms-code",
-  "version": "0.0.8",
+  "version": "0.1.1",
   "description": "A package to generate random code and verify code.",
   "main": "dist/index.js",
   "scripts": {

@@ -1,8 +1,7 @@
 'use strict';
 const expect = require('chai').expect;
-const SmsCode = require('../dist/index').default;
+const smsCode = require('../dist/index').default;
 
-const smsCode = new SmsCode(5, 4)
 const phone = '18888888888'
 
 describe('length test', () => {
